@@ -74,29 +74,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // TEXT OVERLAY MESSAGE
 
-document.addEventListener("DOMContentLoaded", function () {
-    const textOverlay = document.querySelector('.text-overlay');
-    const messages = [
-        "Contact Us",
-        "Welcome to Nova Shipping Limited",
-        "We are happy to have you"
-    ];
-    let index = 0;
+// document.addEventListener("DOMContentLoaded", function () {
+//     const textOverlay = document.querySelector('.text-overlay');
+//     const messages = [
+//         "Contact Us",
+//         "Welcome to Nova Shipping Limited",
+//         "We are happy to have you"
+//     ];
+//     let index = 0;
 
-    function addText() {
-        if (index < messages.length) {
-            const span = document.createElement('span');
-            span.textContent = messages[index];
-            textOverlay.appendChild(span);
-            index++;
-        }
-    }
+//     function addText() {
+//         if (index < messages.length) {
+//             const span = document.createElement('span');
+//             span.textContent = messages[index];
+//             textOverlay.appendChild(span);
+//             index++;
+//         }
+//     }
 
-    // Add text one by one with a delay
-    messages.forEach((message, i) => {
-        setTimeout(() => addText(), i * 1500);
-    });
-});
+//     // Add text one by one with a delay
+//     messages.forEach((message, i) => {
+//         setTimeout(() => addText(), i * 1500);
+//     });
+// });
 
 
 // FORM VALIDATION
