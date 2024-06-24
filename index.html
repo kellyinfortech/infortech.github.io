@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah Shipping & Logistics Limited</title>
+    <title>Home -(PVT) Limited</title>
 
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/inquiry.css">
 
     <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
 
@@ -51,18 +52,136 @@
                     </ul> -->
                 </li>
                 <li class="dropdown">
-                    <a href="content/media/media.html">Blogs</a>
-                    <!-- <ul class="dropdown-content">
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Videos</a></li>
+                    <a href="#">media</a>
+                    <ul class="dropdown-content">
+                        <li><a href="content/media/blogs.html">Blogs</a></li>
+                        <li><a href="#">Testimonial</a></li>
+                        <!-- <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Videos</a></li> -->
                     </ul>
-                </li> -->
+                </li>
                 <li><a href="content/contact/contact.html">Contact Us</a></li>
             </ul>
-            <button class="inquiry-btn">Inquiry</button>
+            <!-- Inquiry Button -->
+           <button class="inquiry-btn" onclick="openForm()">Inquiry</button>
 
+           <!-- Inquiry Form Modal -->
+
+           <div id="inquiryForm" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeForm()">&times;</span>
+              <h2>Inquiry Form</h2>
+              <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+              </div>
+              
+              <!-- Step 1 -->
+              <div class="form-step form-step-active">
+                <h3>Step 1 of 3</h3>
+                <form>
+                  <div class="form-group">
+                    <label for="firstName">Name *</label>
+                    <input type="text" id="firstName" placeholder="First">
+                    <input type="text" id="lastName" placeholder="Last">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Phone">
+                  </div>
+                  <div class="form-group">
+                    <label for="company">Company Name (if applicable)</label>
+                    <input type="text" id="company" placeholder="Company Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="position">Position/Title (if applicable)</label>
+                    <input type="text" id="position" placeholder="Position/Title">
+                  </div>
+                  <button type="button" class="btn" onclick="nextStep()">Next</button>
+                </form>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="form-step">
+                <h3>Step 2 of 3</h3>
+                <h4>Service Details</h4>
+                <div class="form-group">
+                  <label>Type of Service Needed</label>
+                  <div class="service-options">
+                    <div class="service-option">
+                      <img src="sea-freight.jpg" alt="Sea Freight">
+                      <p>Sea Freight</p>
+                    </div>
+                    <div class="service-option">
+                      <img src="air-freight.jpg" alt="Air Freight">
+                      <p>Air Freight</p>
+                    </div>
+                    <div class="service-option">
+                      <img src="road-freight.jpg" alt="Road Freight & Regional Transport">
+                      <p>Road Freight & Regional Transport</p>
+                    </div>
+                    <div class="service-option">
+                      <img src="clearing.jpg" alt="Clearing & Forwarding">
+                      <p>Clearing & Forwarding</p>
+                    </div>
+                    <div class="service-option">
+                      <img src="warehousing.jpg" alt="Warehousing & Distribution">
+                      <p>Warehousing & Distribution</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Origin</label>
+                  <input type="text" placeholder="Address Line 1">
+                  <input type="text" placeholder="City">
+                  <input type="text" placeholder="State / Province / Region">
+                  <select>
+                    <option value="">--- Select country ---</option>
+                    <!-- Add country options here -->
+
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Destination</label>
+                  <input type="text" placeholder="Address Line 1">
+                  <input type="text" placeholder="City">
+                  <input type="text" placeholder="State / Province / Region">
+                  <select>
+                    <option value="">--- Select country ---</option>
+                    <!-- Add country options here -->
+
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Special Handling Requirements</label>
+                  <div>
+                    <input type="checkbox" id="tempSensitive">
+                    <label for="tempSensitive">Temperature-sensitive</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="hazardousMaterials">
+                    <label for="hazardousMaterials">Hazardous materials</label>
+                  </div>
+                </div>
+                <button type="button" class="btn" onclick="prevStep()">Previous</button>
+                <button type="button" class="btn" onclick="nextStep()">Next</button>
+              </div>
+              
+              <!-- Additional steps will go here -->
+            </div>
+          </div>
+          
+            
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -101,7 +220,7 @@
                     commitment to excellence, we offer comprehensive logistics solutions tailored for both 
                     private and public sectors
                 </p>
-                <button class="view-more-btn">View More</button>
+                <a href="content/about/about.html"><button class="view-more-btn">View More</button></a>
             </div>
         </div>
     </section>
@@ -201,6 +320,9 @@
                 <img src="assets/images/stackholder-img/kaa-logo-letter-design-vector-42630746.jpg" alt="Stakeholder 4">
                 <img src="assets/images/stackholder-img/coopbank.jpeg" alt="Stakeholder 5">
                 <img src="assets/images/stackholder-img/kebs.png" alt="Stakeholder 6">
+                <img src="assets/images/stackholder-img/kaa-logo-letter-design-vector-42630746.jpg" alt="Stakeholder 4">
+                <img src="assets/images/stackholder-img/coopbank.jpeg" alt="Stakeholder 5">
+                <img src="assets/images/stackholder-img/kebs.png" alt="Stakeholder 6">
             </div>
         </div>
     </section>
@@ -210,7 +332,7 @@
                 <img src="assets/images/Nova Ventures.webp" alt="Noah Shipping & Logistics Limited Logo" class="logo">
                 <p class="tagline">A reference of excellence</p>
                 <div class="social-media">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61561154790575"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-x-logo"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -230,12 +352,12 @@
                 <div class="quick-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Regional Coverage</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Testimonial</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="content/about/about.html">About Us</a></li>
+                        <li><a href="content/services/service.html">Services</a></li>
+                        <li><a href="content/media/blogs.html">Blogs</a></li>
+                        <li><a href="content/media/blogs.html">Testimonial</a></li>
+                        <li><a href="content/contact/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="services">

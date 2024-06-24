@@ -143,3 +143,97 @@ document.querySelectorAll('.view-more').forEach(function(button) {
         }
     });
 });
+
+
+// TESTIMONIALS
+let slideIndex = 0;
+const slides = document.getElementsByClassName("testimonial-slide")[0];
+const dots = document.getElementsByClassName("dot");
+
+function showSlides() {
+    let totalSlides = Math.ceil(slides.children.length / 3);
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;
+    }
+
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    dots[slideIndex].className += " active";
+}
+
+function currentSlide(n) {
+    slideIndex = n - 1;
+    showSlides();
+}
+
+showSlides();
+
+// Auto slideshow
+setInterval(() => {
+    slideIndex++;
+    showSlides();
+}, 9000); // Change slide every 5 seconds
+
+
+// INQUIRY SECTION
+
+// Open the form
+function openForm() {
+    document.getElementById("inquiryForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("inquiryForm").style.display = "none";
+}
+
+function nextStep() {
+    const currentStep = document.querySelector(".form-step-active");
+    const nextStep = currentStep.nextElementSibling;
+    if (validateForm(currentStep) && nextStep && nextStep.classList.contains("form-step")) {
+        currentStep.classList.remove("form-step-active");
+        nextStep.classList.add("form-step-active");
+        updateProgressBar();
+        scrollToForm();
+    }
+}
+
+function prevStep() {
+    const currentStep = document.querySelector(".form-step-active");
+    const prevStep = currentStep.previousElementSibling;
+    if (prevStep && prevStep.classList.contains("form-step")) {
+        currentStep.classList.remove("form-step-active");
+        prevStep.classList.add("form-step-active");
+        updateProgressBar();
+        scrollToForm();
+    }
+}
+
+function updateProgressBar() {
+    const steps = document.querySelectorAll(".form-step").length;
+    const activeStep = Array.from(document.querySelectorAll(".form-step")).indexOf(document.querySelector(".form-step-active")) + 1;
+    const progressPercentage = (activeStep / steps) * 100;
+    document.getElementById("progress").style.width = progressPercentage + "%";
+}
+
+function scrollToForm() {
+    document.querySelector(".modal-content").scrollIntoView({ behavior: "smooth" });
+}
+
+function validateForm(step) {
+    let valid = true;
+    const inputs = step.querySelectorAll("input, select");
+    inputs.forEach(input => {
+        if (input.value === "" && input.hasAttribute("required")) {
+            input.style.borderColor = "red";
+            valid = false;
+        } else {
+            input.style.borderColor = "#ccc";
+        }
+    });
+    return valid;
+}

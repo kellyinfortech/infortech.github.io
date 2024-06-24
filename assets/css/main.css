@@ -3,7 +3,7 @@ body {
     /* font-family: "Poppins", sans-serif; */
     font-family: "Open Sans", sans-serif;
     /* padding-top: 60px; */
-    display: block;
+    
     padding: 0%;
 }
 
@@ -381,7 +381,7 @@ nav ul li a.active {
 }
 
 .events-news h2 {
-    font-size: 36px;
+    font-size: 23px;
     color: #000;
     margin-bottom: 20px;
     font-family: "Open Sans", sans-serif;
@@ -459,7 +459,7 @@ nav ul li a.active {
 /* STACKHOLDERS */
 
 .stakeholders {
-    padding: 30px 190px;
+    padding: 40px 20px;
     text-align: center;
     background-color: #f9f9f9;
 }
@@ -665,31 +665,22 @@ footer {
 @media (max-width: 768px) {
 
     nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000; /* Ensure the navbar stays on top of other elements */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #fff;
-        padding: 10px 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
+        padding-right: 10px 20px;
     }
+
     .nav-links {
         display: none;
         flex-direction: column;
         gap: 1;
-        width: 50%;
+        width: 100%;
         background-color: #ffffff;
         position: absolute;
         top: 64px;
-        left: 50%;
+        left: 0;
         padding-top: 30px;
         padding-bottom: 50px;
-        border-bottom-left-radius: 50px;
+        border-bottom-left-radius: 0;
+        z-index: 1000;
     }
 
     .nav-links.open {
@@ -698,18 +689,24 @@ footer {
 
     .hamburger {
         display: flex;
-        padding-right: 30px;
+        padding-right: 40px;
+        flex-direction: column;
+        cursor: pointer;
+
     }
 
     .about-content {
         flex-direction: column;
+        width: 100%;
     }
 
     .project {
         min-width: 100%;
+        flex-direction: column;
     }
 
     .event-news {
+        flex-direction: column;
         width: 100%;
     }
 
@@ -728,21 +725,29 @@ footer {
     }
 
     .stakeholders{
-        align-items: center;
+        padding: 20px 10px;
+        overflow: hidden;
     }
 
     .stakeholder-slider{
-        align-items: center;
+        height: 120px;
     }
 
     .stakeholders h2 span {
         align-items: center;
-        padding-left: 2%;
+        padding-left: 5%;
         margin: 20px 0;
     }
 
     .stakeholder-track {
-        animation: slide 20s linear infinite;
+        width: calc(100% * 1); /* Adjust width for fewer items visible */
+        animation: slide 30s linear infinite; /* Slower animation for smaller screens */
+    }
+
+    .stakeholder-track img {
+        width: 50px; /* Adjust image size for smaller screens */
+        margin: 10px 20px; /* Adjust margin for better spacing */
+        padding: 30px; /* Adjust padding for smaller screens */
     }
 
     @keyframes slide {
