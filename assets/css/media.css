@@ -1,5 +1,41 @@
+.intro-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.intro-content {
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better text readability */
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.intro-content h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.intro-content h2 {
+    margin: 10px 0 0;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
 .media-section {
-    padding: 50px 0;
+    padding: 40px 0;
     background-color: #f9f9f9;
     text-align: center;
     font-family: "Open Sans", sans-serif;
@@ -44,6 +80,28 @@
     font-size: 0.9em;
     color: #666;
 }
+
+.media-section .description .more-text.hidden {
+    display: none;
+}
+
+.media-section .description .view-more {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+.media-section .description .view-more:hover {
+    background-color: #0056b3;
+}
+
+
 
 @media (max-width: 1200px) {
     .media-section .frame {

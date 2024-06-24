@@ -127,3 +127,19 @@ function validateForm() {
 
     return true;
 }
+
+
+// BLOG SECTION VIEW MORE
+
+document.querySelectorAll('.view-more').forEach(function(button) {
+    button.addEventListener('click', function() {
+        var moreText = this.previousElementSibling;
+        if (moreText.classList.contains('hidden')) {
+            moreText.classList.remove('hidden');
+            this.textContent = 'View Less';
+        } else {
+            moreText.classList.add('hidden');
+            this.textContent = 'View More';
+        }
+    });
+});

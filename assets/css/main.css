@@ -4,6 +4,7 @@ body {
     font-family: "Open Sans", sans-serif;
     /* padding-top: 60px; */
     display: block;
+    padding: 0%;
 }
 
 nav {
@@ -509,7 +510,8 @@ nav ul li a.active {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 40px 20px;
+    padding: 30px 20px;
+    margin: 0px;
 }
 
 .footer-container {
@@ -522,17 +524,17 @@ footer {
 
 .footer-logo {
     text-align: left;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 .footer-logo img.logo {
-    width: 100px;
+    width: 90px;
     border-radius: 50%;
 }
 
 .tagline {
-    margin: 10px 0;
-    font-size: 24px;
+    margin: 5px 0;
+    font-size: 20px;
 }
 
 .social-media a {
@@ -661,6 +663,21 @@ footer {
 /* MEDIA FRAME */
 
 @media (max-width: 768px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure the navbar stays on top of other elements */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    }
     .nav-links {
         display: none;
         flex-direction: column;
@@ -765,6 +782,6 @@ footer {
     }
 
     .footer-links div {
-        margin: 0 40px;
+        margin: 0 10px;
     }
 }
