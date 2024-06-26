@@ -113,10 +113,111 @@
                     commitment to excellence, we offer comprehensive logistics solutions tailored for both 
                     private and public sectors
                 </p>
-                <button class="view-more-btn">View More</button>
+                <!-- <button class="view-more-btn">View More</button> -->
             </div>
         </div>
     </section>
+
+    <section id="bp1-operations">
+        <div class="container">
+            <div class="bp1-content">
+                <div class="bp1-text">
+                    <h3>BP1 Operations</h3>
+                    <p>Noah Shipping & Logistics recently acquired a cargo handling facility – BP1, located inside the Port of Mombasa about 200 meters from the Port’s quayside. The 50,000 sq ft facility is designed to handle conventional import cargo for local and transit clients pending clearance.</p>
+                    <a href="#" class="service-booking-button">Service Booking</a>
+
+                    <!-- BOOKING -->
+
+                    <!-- Service Booking Form -->
+<div id="serviceBookingForm" class="modal1">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Service Booking Form</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Service Required:</label>
+            <select id="service" name="service" required>
+                <option value="freight-forwarding">Freight Forwarding</option>
+                <option value="cargo-handling">Cargo Handling</option>
+                <option value="cfs-operations">CFS Operations</option>
+                <option value="clearing-forwarding">Clearing and Forwarding</option>
+                <option value="transportation">Transportation</option>
+                <option value="rail-services">Rail Services</option>
+                <option value="warehousing">Warehousing and Distribution</option>
+                <option value="insurance">Insurance Services</option>
+                <option value="courier">Courier Services</option>
+                <option value="shipping-agency">Shipping Agency Services</option>
+                <option value="legal-solutions">Legal Solutions</option>
+                <option value="cargo-survey">Cargo Survey</option>
+                <option value="special-cargo-handling">Special Cargo Handling</option>
+            </select>
+
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+                </div>
+                <div class="bp1-image">
+                    <img src="/assets/images/albin.jpg" alt="BP1 Operations">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var modal1 = document.getElementById("serviceBookingForm");
+    var btns = document.querySelectorAll(".service-booking-button");
+    var span = document.getElementsByClassName("close-button")[0];
+
+    btns.forEach(function(btn) {
+        btn.onclick = function() {
+            modal1.style.display = "block";
+        }
+    });
+
+    span.onclick = function() {
+        modal1.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+    }
+});
+    </script>
+
+
+    <section id="port-reitze">
+        <div class="container">
+            <div class="port-reitze-content">
+                <div class="port-reitze-image">
+                    <img src="../../assets/images/backgrounds/con_tainer.jpg" alt="LPC Global Logistics CFS - Port Reitze">
+                </div>
+                <div class="port-reitze-text">
+                    <h3>LPC Global Logistics CFS - Port Reitze</h3>
+                    <p>LPC Global Logistics CFS is located at Port Reitze, barely 1.5 km from the port of Mombasa. The facility handles imported cargo pending clearance. Cargo handled includes the following: Motor vehicles, Containers FCL/FCL (Full Container Load), Containers FCL/LCL (Less Container Load Consolidation), Containers FCL/LCL (For Stripping), Containers – Reefers (Refrigerated), Steel products, Bagged cargo including sugar, fertilizer, maize, wheat etc, Machinery and equipment, Project cargo.</p>
+                    <a href="#" class="service-booking-button">Service Booking</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
 
     <!-- <main>
         <section class="cfs-operations">

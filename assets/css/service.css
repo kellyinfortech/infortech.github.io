@@ -189,3 +189,200 @@ main {
         padding: 6px 12px;
     }
 }
+
+
+/* OPERATIONS */
+#bp1-operations {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#bp1-operations .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#bp1-operations .bp1-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bp1-operations .bp1-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#bp1-operations .bp1-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#bp1-operations .bp1-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#bp1-operations .service-booking-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#bp1-operations .service-booking-button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#bp1-operations .bp1-image {
+    flex: 1;
+    text-align: right;
+}
+
+#bp1-operations .bp1-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/* PORT REITZE */
+
+#port-reitze {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#port-reitze .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#port-reitze .port-reitze-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#port-reitze .port-reitze-text {
+    flex: 1;
+    margin-left: 20px;
+}
+
+#port-reitze .port-reitze-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#port-reitze .port-reitze-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#port-reitze .service-booking-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#port-reitze .service-booking-button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#port-reitze .port-reitze-image {
+    flex: 1;
+    text-align: left;
+}
+
+#port-reitze .port-reitze-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/* BOOKING SECTION */
+
+/* Modal styles */
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+#bookingForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#bookingForm label {
+    margin-top: 10px;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+#bookingForm button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#bookingForm button:hover {
+    background-color: #c0392b;
+}

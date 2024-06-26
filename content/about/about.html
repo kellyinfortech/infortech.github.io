@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/media.css">
+    <link rel="stylesheet" href="../../assets/css/about.css">
     <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
 
 
@@ -103,6 +104,211 @@
                     freight, contract logistics, and sophisticated supply chain solutions.
                 </p>
                 <!-- <button class="view-more-btn">View More</button> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- OUR MISSION  -->
+
+    <section id="mission-vision">
+        <div class="container">
+            <h2>Our <span class="highlight">Mission & Vision</span></h2>
+            <div class="mission-vision-content">
+                <div class="vision">
+                    <h3>Our Vision</h3>
+                    <p>Our vision is to be the preferred one-stop logistics solutions partner.</p>
+                </div>
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to offer value-adding global logistical and advisory services to public and private entities. The Noah Shipping & Logistics service mantra is logistics without borders.</p>
+                </div>
+            </div>
+            <div class="additional-info">
+                <p>Noah Shipping & Logistics has three strategically located domestic hubs – The head office at Crater Automobiles Building on Mombasa Road, a major transit highway with Express Way in Nairobi; The branch office with CFS Operations inside the Inland Container Depot (ICD), a stone’s throw from the Jomo Kenyatta International Airport; and, The Cargo Handling facility (Kenya Ports Authority Back Port Shed 1) inside the Port of Mombasa and CFS operations located at Port Reize area barely 2kms from the port of Mombasa.</p>
+                <p>By operating in one of the key transit points for logistics in East and Central Africa, Noah Shipping & Logistics connects the most important economic regions in more than eight African countries – Kenya, Uganda, Tanzania, Ethiopia, South Sudan, Rwanda, Burundi, and Eastern DRC. Noah Shipping & Logistics is a certified Authorized Economic Operator (AEO) as accredited by the Kenya Revenue Authority – Customs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why <span>Choose</span> Us</h2>
+        <div class="container">
+            <div class="image">
+                <img src="../../assets/images/trails.jpg" alt="Why Choose Us Image">
+            </div>
+            <div class="content">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-button">Comprehensive logistics solutions tailored to your needs</button>
+                        <div class="accordion-content">
+                            <p>We offer a comprehensive range of services...</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">Cutting-edge technology and innovative solutions</button>
+                        <div class="accordion-content">
+                            <p>Our team has in-depth knowledge...</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">Reliable and timely delivery</button>
+                        <div class="accordion-content">
+                            <p>We provide services across the region...</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">Expert team with industry experience
+                        </button>
+                        <div class="accordion-content">
+                            <p>Our network extends worldwide...</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">Customer-centric approach</button>
+                        <div class="accordion-content">
+                            <p>We tailor our services to meet your needs...</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">Culture of Excellence</button>
+                        <div class="accordion-content">
+                            <p>We strive for excellence in everything we do...</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">Commitment to excellence</button>
+                        <div class="accordion-content">
+                            <p>We adhere to all regulations and standards...</p>
+                        </div>
+                    </div>
+                    <!-- <div class="accordion-item">
+                        <button class="accordion-button">Excellent Customer Care</button>
+                        <div class="accordion-content">
+                            <p>Customer satisfaction is our priority...</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">Certified Authorized Economic Operator</button>
+                        <div class="accordion-content">
+                            <p>We are certified to provide secure...</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const accordionButtons = document.querySelectorAll(".accordion-button");
+
+    accordionButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const content = button.nextElementSibling;
+            const expanded = button.getAttribute("aria-expanded") === "true" || false;
+
+            accordionButtons.forEach(btn => {
+                btn.setAttribute("aria-expanded", "false");
+                btn.nextElementSibling.style.display = "none";
+                btn.nextElementSibling.style.maxHeight = 0;
+            });
+
+            if (!expanded) {
+                button.setAttribute("aria-expanded", "true");
+                content.style.display = "block";
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+});
+
+    </script>
+
+    <section class="statistics">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="999">0+</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="2000">0+</div>
+                <div class="stat-label">Project Complete</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="1000">0+</div>
+                <div class="stat-label">Registered Member</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="17">0+</div>
+                <div class="stat-label">Awards Winning</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200; // The lower the speed, the faster the count
+
+    const countUp = (target, element) => {
+        const updateCount = () => {
+            const count = +element.innerText.replace('+', ''); // Remove '+' if it exists
+            const increment = target / speed;
+            if (count < target) {
+                element.innerText = Math.ceil(count + increment) + '+';
+                setTimeout(updateCount, 1);
+            } else {
+                element.innerText = target + '+';
+            }
+        };
+        updateCount();
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = +entry.target.getAttribute('data-target');
+                countUp(target, entry.target);
+                observer.unobserve(entry.target); // Stop observing after counting up
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust based on when you want to start the animation
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
+
+    </script>
+
+    <section class="about-us">
+        <div class="container">
+            <div class="text-content">
+                <p>LPC Global Logistics is a leading local and international logistics solutions provider for private and public sector players. We support trade and industry through land transport, worldwide air freight, ocean freight, contract logistics and supply chain solutions. Our full suite of services include: International Freight Forwarding, Cargo Handling, CFS Operations, Clearing and Forwarding, Transportation, Warehousing and Distribution, Insurance and Courier Services.</p>
+                <p>Our business holds top interests in the automotive, technology, consumer goods, construction, pharmaceutical, humanitarian, special transports and dangerous goods industries. We provide you with regular updates of your orders, quotations, invoices, inventory and delivery schedules.</p>
+            </div>
+            <div class="image-content">
+                <img src="../../assets/images/backgrounds/trafic.jpg" alt="Office Image">
+            </div>
+        </div>
+    </section>
+
+    <section id="stakeholders" class="stakeholders">
+        <h2>Our <span>Stakeholders</span></h2>
+        <div class="stakeholder-slider">
+            <div class="stakeholder-track">
+                <img src="../../assets/images/stackholder-img/coopbank.jpeg" alt="Stakeholder 1">
+                <img src="../../assets/images/stackholder-img/kebs.png" alt="Stakeholder 2">
+                <img src="../../assets/images/stackholder-img/kenya-ports.png" alt="Stakeholder 3">
+                <img src="../../assets/images/stackholder-img/kaa-logo-letter-design-vector-42630746.jpg" alt="Stakeholder 4">
+                <img src="../../assets/images/stackholder-img/coopbank.jpeg" alt="Stakeholder 5">
+                <img src="../../assets/images/stackholder-img/kebs.png" alt="Stakeholder 6">
+                <img src="../../assets/images/stackholder-img/kaa-logo-letter-design-vector-42630746.jpg" alt="Stakeholder 4">
+                <img src="../../assets/images/stackholder-img/coopbank.jpeg" alt="Stakeholder 5">
+                <img src="../../assets/images/stackholder-img/kebs.png" alt="Stakeholder 6">
             </div>
         </div>
     </section>
