@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/service.css">
     <link rel="stylesheet" href="../../assets/css/about.css">
+    <link rel="stylesheet" href="../../assets/css/inquiry.css">
 
     <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
 
@@ -63,7 +64,206 @@
                 </li>
                 <li><a href="../contact/contact.html">Contact Us</a></li>
             </ul>
-            <button class="inquiry-btn">Inquiry</button>
+            <button class="inquiry-btn" onclick="openForm" >Inquiry</button>
+
+              <!-- Inquiry Form Modal -->
+<div id="inquiryForm" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeForm()">&times;</span>
+        <h2>Inquiry Form</h2>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        
+        <!-- Step 1 -->
+        <div class="form-step form-step-active">
+            <h3>Step 1 of 3</h3>
+            <div class="form-group">
+                <label for="firstName">Name *</label>
+                <input type="text" id="firstName" placeholder="First" required>
+                <input type="text" id="lastName" placeholder="Last" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Phone">
+            </div>
+            <div class="form-group">
+                <label for="company">Company Name (if applicable)</label>
+                <input type="text" id="company" placeholder="Company Name">
+            </div>
+            <div class="form-group">
+                <label for="position">Position/Title (if applicable)</label>
+                <input type="text" id="position" placeholder="Position/Title">
+            </div>
+            <button type="button" class="btn" onclick="nextStep()">Next</button>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="form-step">
+            <h3>Step 2 of 3</h3>
+            <h4>Service Details</h4>
+            <div class="form-group">
+                <label>Type of Service Needed</label>
+                <div class="service-options">
+                    <div class="service-option">
+                        <img src="./assets/images/backgrounds/freightship3.jpg" alt="Sea Freight">
+                        <p>Sea Freight</p>
+                    </div>
+                    <div class="service-option">
+                        <img src="./assets/images/backgrounds/cargohanding.jpg" alt="Transportation">
+                        <p>Transportation</p>
+                    </div>
+                    <div class="service-option">
+                        <img src="./assets/images/backgrounds/cargohancling1.jpg" alt="Road Freight & Regional Transport">
+                        <p>Road Freight & Regional Transport</p>
+                    </div>
+                    <div class="service-option">
+                        <img src="./assets/images/backgrounds/handlingwell.jpg" alt="Clearing & Forwarding">
+                        <p>Clearing & Forwarding</p>
+                    </div>
+                    <div class="service-option">
+                        <img src="./assets/images/backgrounds/warehose1.jpeg" alt="Warehousing & Distribution">
+                        <p>Warehousing & Distribution</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Origin</label>
+                <input type="text" placeholder="Address Line 1">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="State / Province / Region">
+                <select>
+                    <option value="">--- Select country ---</option>
+                    <!-- Add country options here -->
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Destination</label>
+                <input type="text" placeholder="Address Line 1">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="State / Province / Region">
+                <select>
+                    <option value="">--- Select country ---</option>
+                    <!-- Add country options here -->
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Special Handling Requirements</label>
+                <div>
+                    <input type="checkbox" id="tempSensitive">
+                    <label for="tempSensitive">Temperature-sensitive</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hazardousMaterials">
+                    <label for="hazardousMaterials">Hazardous materials</label>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="prevStep()">Previous</button>
+            <button type="button" class="btn" onclick="nextStep()">Next</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="form-step">
+            <h3>Step 3 of 3</h3>
+            <h4>Timeline and Frequency</h4>
+            <div class="form-group">
+                <label for="pickup-date">Desired Pickup Date/Time</label>
+                <input type="date" id="pickup-date" required>
+                <input type="time" id="pickup-time" required>
+            </div>
+            <div class="form-group">
+                <label>Frequency of Shipments</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="frequency" value="one-time"> One-time</label>
+                    <label><input type="checkbox" name="frequency" value="occasional"> Occasional</label>
+                    <label><input type="checkbox" name="frequency" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Urgency of Delivery</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="urgency" value="high"> High</label>
+                    <label><input type="checkbox" name="urgency" value="medium"> Medium</label>
+                    <label><input type="checkbox" name="urgency" value="low"> Low</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments/Requirements</label>
+                <textarea id="comments"></textarea>
+            </div>
+            <button type="button" class="btn" onclick="prevStep()">Previous</button>
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('inquiryForm');
+    const progressBar = document.getElementById('progress');
+    const steps = document.querySelectorAll('.form-step');
+    let currentStep = 0;
+
+    const updateProgressBar = () => {
+        progressBar.style.width = `${(currentStep / (steps.length - 1)) * 100}%`;
+    };
+
+    const showStep = (index) => {
+        steps.forEach((step, i) => {
+            step.classList.toggle('form-step-active', i === index);
+        });
+        updateProgressBar();
+    };
+
+    const nextStep = () => {
+        if (currentStep < steps.length - 1) {
+            currentStep++;
+            showStep(currentStep);
+        }
+    };
+
+    const prevStep = () => {
+        if (currentStep > 0) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    };
+
+    const openForm = () => {
+        modal.style.display = 'block';
+        showStep(currentStep);
+    };
+
+    const closeForm = () => {
+        modal.style.display = 'none';
+    };
+
+    // Close the modal when clicking outside of it
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            closeForm();
+        }
+    };
+
+    // Expose functions to the global scope
+    window.openForm = openForm;
+    window.closeForm = closeForm;
+    window.nextStep = nextStep;
+    window.prevStep = prevStep;
+});
+
+
+</script>
 
             <div class="hamburger">
                 <span></span>

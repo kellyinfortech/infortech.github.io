@@ -1,40 +1,38 @@
-/* Inquiry Button */
+body {
+  font-family: Arial, sans-serif;
+}
+
 .inquiry-btn {
-  background-color: #d00;
-  color: white;
+  display: inline-block;
   padding: 10px 20px;
+  background-color: red;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
-.inquiry-btn:hover {
-  background-color: #a00;
-}
-
-/* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  background-color: rgba(0,0,0,0.4);
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #fefefe;
   margin: 5% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 10px;
-  position: relative;
 }
 
 .close {
@@ -54,58 +52,84 @@
 .progress-bar {
   width: 100%;
   background-color: #f3f3f3;
-  border-radius: 13px;
+  border-radius: 5px;
   overflow: hidden;
-  margin: 10px 0;
+  margin-bottom: 20px;
 }
 
 .progress {
-  width: 33%;
   height: 10px;
-  background-color: #007bff;
+  background-color: red;
+  width: 0%;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step-active {
+  display: block;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 15px;
 }
 
-.form-group input,
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group textarea,
 .form-group select {
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 .service-options {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 .service-option {
   flex: 1 1 30%;
+  margin: 10px;
   text-align: center;
 }
 
 .service-option img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 5px;
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-group label {
+  margin-right: 15px;
 }
 
 .btn {
-  background-color: #d00;
-  color: white;
+  display: inline-block;
   padding: 10px 20px;
+  background-color: red;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-top: 20px;
 }
 
 .btn:hover {
-  background-color: #a00;
+  background-color: darkred;
 }

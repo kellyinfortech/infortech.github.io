@@ -101,32 +101,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // FORM VALIDATION
 
-function validateForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var subject = document.getElementById("subject").value;
-    var message = document.getElementById("message").value;
+// function validateForm() {
+//     var name = document.getElementById("name").value;
+//     var email = document.getElementById("email").value;
+//     var phone = document.getElementById("phone").value;
+//     var subject = document.getElementById("subject").value;
+//     var message = document.getElementById("message").value;
 
-    if (name === "" || email === "" || phone === "" || subject === "" || message === "") {
-        alert("Please fill out all fields.");
-        return false;
-    }
+//     if (name === "" || email === "" || phone === "" || subject === "" || message === "") {
+//         alert("Please fill out all fields.");
+//         return false;
+//     }
 
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailPattern.test(email)) {
-        alert("Please enter a valid email address.");
-        return false;
-    }
+//     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+//     if (!emailPattern.test(email)) {
+//         alert("Please enter a valid email address.");
+//         return false;
+//     }
 
-    var phonePattern = /^\+?\d{1,4}?[-.\s]?(\d{3})?[-.\s]?\d{3,4}[-.\s]?\d{3,4}$/;
-    if (!phonePattern.test(phone)) {
-        alert("Please enter a valid phone number.");
-        return false;
-    }
+//     var phonePattern = /^\+?\d{1,4}?[-.\s]?(\d{3})?[-.\s]?\d{3,4}[-.\s]?\d{3,4}$/;
+//     if (!phonePattern.test(phone)) {
+//         alert("Please enter a valid phone number.");
+//         return false;
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
 
 // BLOG SECTION VIEW MORE
@@ -190,58 +190,57 @@ window.addEventListener("resize", showSlides);
 
 // INQUIRY SECTION
 
-// Open the form
-function openForm() {
-    document.getElementById("inquiryForm").style.display = "block";
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('inquiryForm');
+    const progressBar = document.getElementById('progress');
+    const steps = document.querySelectorAll('.form-step');
+    let currentStep = 0;
 
-function closeForm() {
-    document.getElementById("inquiryForm").style.display = "none";
-}
+    const updateProgressBar = () => {
+        progressBar.style.width = `${(currentStep / (steps.length - 1)) * 100}%`;
+    };
 
-function nextStep() {
-    const currentStep = document.querySelector(".form-step-active");
-    const nextStep = currentStep.nextElementSibling;
-    if (validateForm(currentStep) && nextStep && nextStep.classList.contains("form-step")) {
-        currentStep.classList.remove("form-step-active");
-        nextStep.classList.add("form-step-active");
+    const showStep = (index) => {
+        steps.forEach((step, i) => {
+            step.classList.toggle('form-step-active', i === index);
+        });
         updateProgressBar();
-        scrollToForm();
-    }
-}
+    };
 
-function prevStep() {
-    const currentStep = document.querySelector(".form-step-active");
-    const prevStep = currentStep.previousElementSibling;
-    if (prevStep && prevStep.classList.contains("form-step")) {
-        currentStep.classList.remove("form-step-active");
-        prevStep.classList.add("form-step-active");
-        updateProgressBar();
-        scrollToForm();
-    }
-}
-
-function updateProgressBar() {
-    const steps = document.querySelectorAll(".form-step").length;
-    const activeStep = Array.from(document.querySelectorAll(".form-step")).indexOf(document.querySelector(".form-step-active")) + 1;
-    const progressPercentage = (activeStep / steps) * 100;
-    document.getElementById("progress").style.width = progressPercentage + "%";
-}
-
-function scrollToForm() {
-    document.querySelector(".modal-content").scrollIntoView({ behavior: "smooth" });
-}
-
-function validateForm(step) {
-    let valid = true;
-    const inputs = step.querySelectorAll("input, select");
-    inputs.forEach(input => {
-        if (input.value === "" && input.hasAttribute("required")) {
-            input.style.borderColor = "red";
-            valid = false;
-        } else {
-            input.style.borderColor = "#ccc";
+    const nextStep = () => {
+        if (currentStep < steps.length - 1) {
+            currentStep++;
+            showStep(currentStep);
         }
-    });
-    return valid;
-}
+    };
+
+    const prevStep = () => {
+        if (currentStep > 0) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    };
+
+    const openForm = () => {
+        modal.style.display = 'block';
+        showStep(currentStep);
+    };
+
+    const closeForm = () => {
+        modal.style.display = 'none';
+    };
+
+    // Close the modal when clicking outside of it
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            closeForm();
+        }
+    };
+
+    // Expose functions to the global scope
+    window.openForm = openForm;
+    window.closeForm = closeForm;
+    window.nextStep = nextStep;
+    window.prevStep = prevStep;
+});
+
