@@ -144,6 +144,7 @@ document.querySelectorAll('.view-more').forEach(function(button) {
     });
 });
 
+// TESTIMNIALS
 
 // TESTIMONIALS
 let slideIndex = 0;
@@ -152,6 +153,10 @@ const dots = document.getElementsByClassName("dot");
 
 function showSlides() {
     let totalSlides = Math.ceil(slides.children.length / 3);
+    if (window.innerWidth <= 768) {
+        totalSlides = slides.children.length;
+    }
+
     if (slideIndex >= totalSlides) {
         slideIndex = 0;
     } else if (slideIndex < 0) {
@@ -174,10 +179,13 @@ function currentSlide(n) {
 showSlides();
 
 // Auto slideshow
-setInterval(() => {
-    slideIndex++;
-    showSlides();
-}, 9000); // Change slide every 5 seconds
+// setInterval(() => {
+//     slideIndex++;
+//     showSlides();
+// }, 9000); 
+
+// Recalculate slides on window resize
+window.addEventListener("resize", showSlides);
 
 
 // INQUIRY SECTION

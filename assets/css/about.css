@@ -172,6 +172,7 @@ body {
 @media (max-width: 768px) {
     .stat-item {
         max-width: 150px;
+        align-items: none;
     }
 
     .stat-number {

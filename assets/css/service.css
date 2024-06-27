@@ -142,7 +142,57 @@ main {
     margin-bottom: 30px;
 }
 
+@media (max-width: 658px){
+    .bp1-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bp1-content img {
+        margin-top: 30px;
+        padding-right: 50px;
+    }
+
+    .bp1-text, .bp1-image {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .bp1-text h3 {
+        font-size: 20px;
+    }
+
+    .bp1-text p {
+        font-size: 14px;
+    }
+
+}
+
 @media (max-width: 768px) {
+
+    .port-reitze-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .port-reitze-image, .port-reitze-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .port-reitze-text h3 {
+        font-size: 20px;
+    }
+    .port-reitze-image img {
+
+        max-width: 100%;
+        margin-left: 30px;
+        padding-top: 20px;
+    }
+
+    .port-reitze-text p {
+        font-size: 14px;
+    }
 
     .cfs-operations h1 {
         font-size: 28px;
@@ -245,7 +295,7 @@ main {
 }
 
 #bp1-operations .bp1-image img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 10px;
 }
 
@@ -270,7 +320,7 @@ main {
 
 #port-reitze .port-reitze-text {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 #port-reitze .port-reitze-text h3 {
@@ -305,7 +355,7 @@ main {
 }
 
 #port-reitze .port-reitze-image img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 10px;
 }
 
