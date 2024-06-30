@@ -127,3 +127,38 @@
         margin: 15px 0; /* Adjust margin for smaller screens */
     }
 }
+
+/* LAUCHING SOON SECTINO */
+
+.launch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.launch-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.launch-button:hover {
+    background-color: #0056b3;
+}
+
+.launch-message {
+    display: none;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}

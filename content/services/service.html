@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services-(PTV) Limited</title>
 
+
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/service.css">
     <link rel="stylesheet" href="../../assets/css/about.css">
     <link rel="stylesheet" href="../../assets/css/inquiry.css">
+
+    <!-- FONTS -->
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+    
+
 
     <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
 
@@ -32,7 +46,7 @@
             <a href="../../index.html" style="text-decoration: none;">
                 <div class="logo">
                     <img src="../../assets/images/Nova Ventures.webp" alt="Noah Shipping & Logistics Limited Logo" class="brand" >
-                    <h2>(PVT) <span>Ltd</span></h2>
+                    <h2> <span>N</span>oah <span>S</span>hipping  & <span>L</span>ogistics <span>L</span>td</h2>
                 </div>
             </a>
             <ul class="nav-links">
@@ -66,19 +80,20 @@
                 </li>
                 <li><a href="../contact/contact.html">Contact Us</a></li>
             </ul>
-            <button class="inquiry-btn" onclick="openForm" >Inquiry</button>
+            <a href="#serviceBookingForm" class="service-booking-button"> <button class="inquiry-btn"  onclick="openForm" >Book Service</button></a>
+          
 
               <!-- Inquiry Form Modal -->
-<div id="inquiryForm" class="modal">
+<!-- <div id="inquiryForm" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeForm()">&times;</span>
         <h2>Inquiry Form</h2>
         <div class="progress-bar">
             <div class="progress" id="progress"></div>
-        </div>
+        </div> -->
         
         <!-- Step 1 -->
-        <div class="form-step form-step-active">
+        <!-- <div class="form-step form-step-active">
             <h3>Step 1 of 3</h3>
             <div class="form-group">
                 <label for="firstName">Name *</label>
@@ -102,10 +117,10 @@
                 <input type="text" id="position" placeholder="Position/Title">
             </div>
             <button type="button" class="btn" onclick="nextStep()">Next</button>
-        </div>
+        </div> -->
         
         <!-- Step 2 -->
-        <div class="form-step">
+        <!-- <div class="form-step">
             <h3>Step 2 of 3</h3>
             <h4>Service Details</h4>
             <div class="form-group">
@@ -139,9 +154,10 @@
                 <input type="text" placeholder="City">
                 <input type="text" placeholder="State / Province / Region">
                 <select>
-                    <option value="">--- Select country ---</option>
+                    <option value="">--- Select country ---</option> -->
+
                     <!-- Add country options here -->
-                    <option value="USA">USA</option>
+                    <!-- <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
                     <option value="UK">UK</option>
                 </select>
@@ -152,9 +168,9 @@
                 <input type="text" placeholder="City">
                 <input type="text" placeholder="State / Province / Region">
                 <select>
-                    <option value="">--- Select country ---</option>
+                    <option value="">--- Select country ---</option> -->
                     <!-- Add country options here -->
-                    <option value="USA">USA</option>
+                    <!-- <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
                     <option value="UK">UK</option>
                 </select>
@@ -172,10 +188,10 @@
             </div>
             <button type="button" class="btn" onclick="prevStep()">Previous</button>
             <button type="button" class="btn" onclick="nextStep()">Next</button>
-        </div>
+        </div> -->
 
         <!-- Step 3 -->
-        <div class="form-step">
+        <!-- <div class="form-step">
             <h3>Step 3 of 3</h3>
             <h4>Timeline and Frequency</h4>
             <div class="form-group">
@@ -207,9 +223,9 @@
             <button type="submit" class="btn">Submit</button>
         </div>
     </div>
-</div>
+</div> -->
 
-<script>
+<!-- <script>
     document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('inquiryForm');
     const progressBar = document.getElementById('progress');
@@ -265,7 +281,7 @@
 });
 
 
-</script>
+</script> -->
 
             <div class="hamburger">
                 <span></span>
@@ -294,7 +310,7 @@
             <div class="service-card">
                 <img src="../../assets/images/trails.jpg" alt="Website Maintenance">
                 <div class="overlay">
-                    <div class="service-text">Road Freight</div>
+                    <div class="service-text">Transportation</div>
                 </div>
             </div>
         </div>
@@ -599,7 +615,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-button">Legal Solutionsr</button>
+                        <button class="accordion-button">Legal Solutions</button>
                         <div class="accordion-content">
                             <p>
                                 Expert legal support for victims of shipping-related fraud cases. Our 
@@ -774,12 +790,11 @@
                     </ul>
                 </div>
                 <div class="head-office">
-                    <h3>Nairobi Head Office</h3>
-                    <p>mombasa, 3th Floor,<br>
-                       Moi Avenue P.O. Box 68099<br>
-                       00200 Nairobi, Kenya</p>
-                    <p>Tel: +254 20 665 11 93<br>
-                       Cell: +254 718 457 474</p>
+                    <h3>Mombasa Head Office</h3>
+                    <p>Ganjoni Building<br>
+                       St.Bernad Road P.O. Box 41456 <br>
+                       80100 Mombasa, Kenya</p>
+                    <p>Tel: +254 110 999 111<br>
                     <p>Email: <a href="mailto:info@NoahShipping.com">info@NoahShipping.com</a></p>
                     <a href="../contact/contact.html#map" class="get-direction">Get Direction</a>
                 </div>

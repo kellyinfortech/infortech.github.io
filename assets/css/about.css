@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -20,10 +21,11 @@ body {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 30px;
+    font-family: "Poppins", sans-serif;
 }
 
 #mission-vision .highlight {
-    color: #e74c3c;
+    color: #001aff;
 }
 
 #mission-vision .mission-vision-content {
@@ -51,6 +53,7 @@ body {
     font-size: 1.1em;
     line-height: 1.6;
     margin-top: 30px;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -59,6 +62,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .why-choose-us h2 {
@@ -67,13 +71,14 @@ body {
 }
 
 .why-choose-us h2 span {
-    color: red;
+    color: #001aff;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    font-family: "Poppins", sans-serif;
 }
 
 .image {
@@ -89,11 +94,13 @@ body {
 .content {
     flex: 2;
     min-width: 300px;
+    font-family: "Poppins", sans-serif;
 }
 
 .accordion {
     width: 100%;
     text-align: left;
+    font-family: "Poppins", sans-serif;
 }
 
 .accordion-item {
@@ -127,6 +134,7 @@ body {
 
 .accordion-content p {
     margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 /* STATISTICS SECTION */
@@ -144,6 +152,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    font-family: "Poppins", sans-serif;
 }
 
 .stat-item {
@@ -154,11 +163,13 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 200px;
     max-width: 200px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
 }
 
 .stat-number {
     font-size: 36px;
-    color: red;
+    color: #001aff;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -219,12 +230,14 @@ body {
     flex: 1;
     min-width: 300px;
     padding: 20px;
+    font-family: "Poppins", sans-serif;
 }
 
 .text-content p {
     margin-bottom: 20px;
     color: #333;
     line-height: 1.6;
+    font-family: "Poppins", sans-serif;
 }
 
 .image-content {

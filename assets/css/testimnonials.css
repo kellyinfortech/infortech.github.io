@@ -64,7 +64,7 @@
     margin: 5px 0 0;
     font-size: 1em;
     font-weight: 600;
-    color: #d9534f;
+    color: #001aff;
 }
 
 .testimonial-card h5 {
@@ -91,7 +91,7 @@
 }
 
 .dot.active {
-    background-color: #d9534f;
+    background-color: #001aff;
 }
 
 /* Responsive Styles */

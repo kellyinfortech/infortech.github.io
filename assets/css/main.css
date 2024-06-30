@@ -1,11 +1,36 @@
 body {
     margin: 0;
-    /* font-family: "Poppins", sans-serif; */
-    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    /* font-family: "Corben" serif; */
+    font-family: "Roboto Condensed", sans-serif;
     /* padding-top: 60px; */
     
     padding: 0%;
 }
+
+ /* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900 */
+
+.roboto-condensed {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.corben-regular {
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .corben-bold {
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
 
 nav {
     position: fixed;
@@ -20,6 +45,7 @@ nav {
     padding: 10px 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
+
 }
 
 .logo {
@@ -28,20 +54,24 @@ nav {
     gap: 10px;
 }
 .logo img {
-    height: 50px;
+    height: 60px;
     border-radius: 70%;
 }
 
 nav .logo h2{
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
     flex: 1;
     text-align: center;
-    text-transform: uppercase;
+    /* font-family: "Corben" serif; */
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    /* text-transform: uppercase; */
+    /* color: #0417c0; */
 }
 nav .logo h2 span {
-    color: #0417c0;
+    color: #001aff;
     
     
 }
@@ -52,8 +82,8 @@ nav .logo h2 span {
 }
 
 nav ul li a.active {
-    color: #ff0000; /* Change to your preferred active color */
-    font-weight: bold; /* Optionally make it bold */
+    color: #001aff; /* Change to your preferred active color */
+    font-weight: 700; /* Optionally make it bold */
     text-decoration: underline; /* Optionally underline */
 }
 
@@ -67,10 +97,11 @@ nav ul li a.active {
     color: #000;
     font-weight: bold;
     padding: 10px;
+    list-style: none;
 }
 
 .nav-links a:hover {
-    color: #d00;
+    color: #001aff;
 }
 
 .dropdown-content {
@@ -80,6 +111,11 @@ nav ul li a.active {
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    list-style: none;
+}
+
+.dropdown .dropdown-content li a {
+    text-decoration: none;
 }
 
 .dropdown-content a {
@@ -117,17 +153,20 @@ nav ul li a.active {
 
 .inquiry-btn {
     background-color: #fff;
-    border: 2px solid #d00;
+    border: 2px solid #001aff;
     border-radius: 20px;
     padding: 5px 15px;
-    color: #d00;
-    font-weight: bold;
+    color: #001aff;
+    font-weight: 700;
     cursor: pointer;
     margin-right: 30px;
+    /* font-family: "Corben" serif; */
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .inquiry-btn:hover {
-    background-color: #d00;
+    background-color: #001aff;
     color: #fff;
 }
 
@@ -226,16 +265,23 @@ nav ul li a.active {
     padding: 50px 20px;
     text-align: center;
     background-color: #f9f9f9;
+    font-family: "Poppins", sans-serif;
 }
 
 .about-us h2 {
     font-size: 36px;
     color: #000;
     margin-bottom: 20px;
+    /* font-family: "Corben" serif; */
+    /* font-family: "Roboto Condensed", sans-serif; */
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
 }
 
 .about-us h2 span {
-    color: #d00;
+    color: #001aff;
+    font-family: "Poppins", sans-serif;
 }
 
 .about-content {
@@ -247,6 +293,11 @@ nav ul li a.active {
     margin: 0 auto;
     flex-wrap: wrap;
     padding: 20px;
+    font-family: "Poppins", sans-serif;
+    /* font-family: "Corben" serif; */
+    /* font-family: "Roboto Condensed", sans-serif; */
+    font-optical-sizing: auto;
+    font-weight: 540;
 }
 
 .about-content img {
@@ -261,7 +312,11 @@ nav ul li a.active {
     text-align: justify; /* Ensure text alignment is justified */
     padding: 20px; /* Add padding for better spacing */
     line-height: 1.6; /* Increase line height for readability */
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    /* font-family: "Roboto Condensed", sans-serif; */
+    /* font-family: "Corben" serif; */
+    font-family: "Poppins", sans-serif;
+    /* font-weight: 500; */
 }
 
 /* MEDIA REPONSIVE */
@@ -288,6 +343,7 @@ nav ul li a.active {
     text-align: justify;
     padding: 20px;
     line-height: 1.6;
+    font-family: "Poppins", sans-serif;
 }
 
 .about-us p {
@@ -300,17 +356,17 @@ nav ul li a.active {
 
 .view-more-btn {
     background-color: #fff;
-    border: 2px solid #d00;
+    border: 2px solid #001aff;
     border-radius: 20px;
     padding: 10px 20px;
-    color: #d00;
+    color: #001aff;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
 }
 
 .view-more-btn:hover {
-    background-color: #d00;
+    background-color: #001aff;
     color: #fff;
 }
 
@@ -321,14 +377,18 @@ nav ul li a.active {
     padding: 50px 20px;
     text-align: center;
     background-color: #f9f9f9;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Corben" serif; */
+    font-family: "Poppins", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
 }
 
 .projects h2 {
     font-size: 36px;
     color: #000;
     margin-bottom: 20px;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    /* font-family: "Corben" serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 .projects-container {
@@ -386,11 +446,13 @@ nav ul li a.active {
     font-size: 23px;
     color: #000;
     margin-bottom: 20px;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    /* font-family: "Corben" serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 .events-news h2 span {
-    color: #d82a3a; /* Red color */
+    color: #001aff; /* Red color */
 }
 
 .events-news-container {
@@ -428,32 +490,35 @@ nav ul li a.active {
 
 .event-news-info h3 {
     font-size: 18px;
-    color: #d82a3a;
+    color: #031bf1d8;
     margin-bottom: 10px;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 .event-news-info p {
     font-size: 14px;
     color: #000000;
     margin-bottom: 10px;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 .read-more {
     background-color: transparent;
-    border: 1px solid #d82a3a;
-    color: #d82a3a;
+    border: 1px solid  #001aff;
+    color: #001aff;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
 }
 
 .read-more:hover {
-    background-color: #d82a3a;
+    background-color: #001aff;
     color: #fff;
 }
 
@@ -470,11 +535,13 @@ nav ul li a.active {
     font-size: 36px;
     color: #000;
     margin-bottom: 20px;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+
+    font-family: "Poppins", sans-serif;
 }
 
 .stakeholders h2 span {
-    color: #d82a3a; /* Red color */
+    color: #001aff; /* Red color */
 }
 
 .stakeholder-slider {
@@ -551,6 +618,7 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 70%;
+    font-family: "Poppins", sans-serif;
 }
 
 .footer-links div {
@@ -559,7 +627,8 @@ footer {
 
 .footer-links h3 {
     margin-bottom: 20px;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 .footer-links ul {
@@ -579,7 +648,7 @@ footer {
 
 .footer-links a:hover {
     text-decoration: none;
-    color: #d00;
+    color: #001aff;
 }
 
 .head-office p,
@@ -610,11 +679,13 @@ footer {
     border-top: 3px solid #7e7b7b;
     font-size: 15px;
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .footer-bottom p {
     margin: 5px 0;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 .footer-bottom a {

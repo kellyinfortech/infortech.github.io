@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/testimnonials.css">
     <link rel="stylesheet" href="../../assets/css/inquiry.css">
+    <link rel="stylesheet" href="../../assets/css/service.css">
+
+    <script src="../../assets/js/book.js"></script>
 
     <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
 
@@ -31,7 +34,7 @@
             <a href="../../index.html" style="text-decoration: none;">
                 <div class="logo">
                     <img src="../../assets/images/Nova Ventures.webp" alt="Noah Shipping & Logistics Limited Logo" class="brand" >
-                    <h2> (Pvt) <span>ltd</span></h2>
+                    <h2> <span>N</span>oah <span>S</span>hipping  & <span>L</span>ogistics <span>L</span>td</h2>
                 </div>
             </a>
             <ul class="nav-links">
@@ -65,19 +68,61 @@
                 </li>
                 <li><a href="../contact/contact.html">Contact Us</a></li>
             </ul>
-            <button class="inquiry-btn" onclick="openForm">Inquiry</button>
+            <a href="#serviceBookingForm" class="service-booking-button"> <button class="inquiry-btn"  onclick="openForm" >Inquiry</button></a>
+            
+
+             <!-- Service Booking Form -->
+             <div id="serviceBookingForm" class="modal1">
+                <div class="modal-content">
+                   <span class="close-button">&times;</span>
+                    <h2>Inquiry</h2>
+                       <form id="bookingForm">
+                           <label for="name">Name:</label>
+                           <input type="text" id="name" name="name" required>
+
+                           <label for="email">Email:</label>
+                           <input type="email" id="email" name="email" required>
+
+                           <label for="phone">Phone Number:</label>
+                           <input type="tel" id="phone" name="phone" required>
+
+                           <label for="service">Service Required:</label>
+                               <select id="service" name="service" required>
+                                   <option value="freight-forwarding">Freight Forwarding</option>
+                                   <option value="cargo-handling">Cargo Handling</option>
+                                   <option value="cfs-operations">CFS Operations</option>
+                                   <option value="clearing-forwarding">Clearing and Forwarding</option>
+                                   <option value="transportation">Transportation</option>
+                                   <option value="rail-services">Rail Services</option>
+                                   <option value="warehousing">Warehousing and Distribution</option>
+                                   <option value="insurance">Insurance Services</option>
+                                   <option value="courier">Courier Services</option>
+                                   <option value="shipping-agency">Shipping Agency Services</option>
+                                   <option value="legal-solutions">Legal Solutions</option>
+                                   <option value="cargo-survey">Cargo Survey</option>
+                                   <option value="special-cargo-handling">Special Cargo Handling</option>
+                               </select>
+
+                               <label for="message">Additional Information:</label>
+                               <textarea id="message" name="message" rows="4" required></textarea>
+
+                               <button type="submit">Submit</button>
+                        </form>
+                   </div>
+               </div>
+
 
               <!-- Inquiry Form Modal -->
-<div id="inquiryForm" class="modal">
+<!-- <div id="inquiryForm" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeForm()">&times;</span>
         <h2>Inquiry Form</h2>
         <div class="progress-bar">
             <div class="progress" id="progress"></div>
-        </div>
+        </div> -->
         
         <!-- Step 1 -->
-        <div class="form-step form-step-active">
+        <!-- <div class="form-step form-step-active">
             <h3>Step 1 of 3</h3>
             <div class="form-group">
                 <label for="firstName">Name *</label>
@@ -102,9 +147,9 @@
             </div>
             <button type="button" class="btn" onclick="nextStep()">Next</button>
         </div>
-        
+         -->
         <!-- Step 2 -->
-        <div class="form-step">
+        <!-- <div class="form-step">
             <h3>Step 2 of 3</h3>
             <h4>Service Details</h4>
             <div class="form-group">
@@ -138,9 +183,9 @@
                 <input type="text" placeholder="City">
                 <input type="text" placeholder="State / Province / Region">
                 <select>
-                    <option value="">--- Select country ---</option>
+                    <option value="">--- Select country ---</option> -->
                     <!-- Add country options here -->
-                    <option value="USA">USA</option>
+                    <!-- <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
                     <option value="UK">UK</option>
                 </select>
@@ -151,9 +196,9 @@
                 <input type="text" placeholder="City">
                 <input type="text" placeholder="State / Province / Region">
                 <select>
-                    <option value="">--- Select country ---</option>
+                    <option value="">--- Select country ---</option> -->
                     <!-- Add country options here -->
-                    <option value="USA">USA</option>
+                    <!-- <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
                     <option value="UK">UK</option>
                 </select>
@@ -171,10 +216,10 @@
             </div>
             <button type="button" class="btn" onclick="prevStep()">Previous</button>
             <button type="button" class="btn" onclick="nextStep()">Next</button>
-        </div>
+        </div> -->
 
         <!-- Step 3 -->
-        <div class="form-step">
+        <!-- <div class="form-step">
             <h3>Step 3 of 3</h3>
             <h4>Timeline and Frequency</h4>
             <div class="form-group">
@@ -206,9 +251,9 @@
             <button type="submit" class="btn">Submit</button>
         </div>
     </div>
-</div>
+</div> -->
 
-<script>
+<!-- <script>
     document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('inquiryForm');
     const progressBar = document.getElementById('progress');
@@ -264,7 +309,7 @@
 });
 
 
-</script>
+</script> -->
 
             <div class="hamburger">
                 <span></span>
@@ -418,12 +463,11 @@
                     </ul>
                 </div>
                 <div class="head-office">
-                    <h3>Nairobi Head Office</h3>
-                    <p>mombasa, 3th Floor,<br>
-                       Moi Avenue P.O. Box 68099<br>
-                       00200 Nairobi, Kenya</p>
-                    <p>Tel: +254 20 665 11 93<br>
-                       Cell: +254 718 457 474</p>
+                    <h3>Mombasa Head Office</h3>
+                    <p>Ganjoni Building<br>
+                       St.Bernad Road P.O. Box 41456 <br>
+                       80100 Mombasa, Kenya</p>
+                    <p>Tel: +254 110 999 111<br>
                     <p>Email: <a href="mailto:info@NoahShipping.com">info@NoahShipping.com</a></p>
                     <a href="../contact/contact.html#map" class="get-direction">Get Direction</a>
                 </div>

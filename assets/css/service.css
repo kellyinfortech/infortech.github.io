@@ -2,6 +2,7 @@
     /* to account for the fixed social media bar */
     margin: 0;
     padding: 20px;
+    font-family: "Poppins", sans-serif;
     position: relative;
     background: url(/assets/images/backgrounds/ship1.jpg) no-repeat center center/cover;
 }
@@ -18,6 +19,7 @@
     text-transform: uppercase;
     color: #fff;
     padding: 20px;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -54,7 +56,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s;
 }
 
@@ -70,6 +72,7 @@
     color: #fff;
     font-size: 20px;
     text-align: center;
+    padding-top: 150px;
 }
 
 @media (max-width: 768px) {
@@ -88,10 +91,12 @@
 
 main {
     padding: 40px 20px;
+    font-family: "Poppins", sans-serif;
 }
 
 .cfs-operations {
     text-align: justify;
+    font-family: "Poppins", sans-serif;
 
 
 }
@@ -99,6 +104,7 @@ main {
 .cfs-operations h1 {
     font-size: 36px;
     margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
 }
 
 .bp1-operations {
@@ -107,24 +113,27 @@ main {
 .bp1-operations h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
 }
 
 .bp1-operations p {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: justify;
+    font-family: "Poppins", sans-serif;
 }
 
 .service-booking {
-    border: 2px solid #dc3545;
+    border: 2px solid #001aff;
     padding: 10px 20px;
     border-radius: 5px;
-    color: #dc3545;
+    color: #001aff;
     text-decoration: none;
     font-size: 16px;
+    font-family: "Poppins", sans-serif;
 }
 .service-booking:hover{
-    background: red;
+    background: #001aff;
     text-decoration: none;
     color: white;
 
@@ -245,6 +254,7 @@ main {
 #bp1-operations {
     padding: 50px 20px;
     background-color: #f9f9f9;
+    font-family: "Poppins", sans-serif;
 }
 
 #bp1-operations .container {
@@ -256,6 +266,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: "Poppins", sans-serif;
 }
 
 #bp1-operations .bp1-text {
@@ -277,15 +288,16 @@ main {
 #bp1-operations .service-booking-button {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #e74c3c;
-    color: #e74c3c;
+    border: 2px solid #001aff;
+    color: #001aff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
+    font-family: "Poppins", sans-serif;
 }
 
 #bp1-operations .service-booking-button:hover {
-    background-color: #e74c3c;
+    background-color: #001aff;
     color: #fff;
 }
 
@@ -305,6 +317,7 @@ main {
 #port-reitze {
     padding: 50px 20px;
     background-color: #f9f9f9;
+    font-family: "Poppins", sans-serif;
 }
 
 #port-reitze .container {
@@ -337,15 +350,16 @@ main {
 #port-reitze .service-booking-button {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #e74c3c;
-    color: #e74c3c;
+    border: 2px solid #001aff;
+    color: #001aff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
+    font-family: "Poppins", sans-serif;
 }
 
 #port-reitze .service-booking-button:hover {
-    background-color: #e74c3c;
+    background-color: #001aff;
     color: #fff;
 }
 
@@ -368,11 +382,12 @@ main {
     position: fixed;
     z-index: 1;
     left: 0;
-    top: 40px;
+    top: 78px;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+    font-family: "Poppins", sans-serif;
 }
 
 .modal-content {
@@ -401,6 +416,7 @@ main {
 
 .modal-content h2 {
     margin-top: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 #bookingForm {
@@ -427,14 +443,14 @@ main {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #e74c3c;
+    background-color: #001aff;
     color: white;
     font-size: 1em;
     cursor: pointer;
 }
 
 #bookingForm button:hover {
-    background-color: #c0392b;
+    background-color: #001aff;
 }
 
 @media (max-width: 768px) {

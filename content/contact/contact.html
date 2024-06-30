@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../../assets/css/contact.css">
     <link rel="stylesheet" href="../../assets/css/media.css">
     <link rel="stylesheet" href="../../assets/css/inquiry.css">
+    <link rel="stylesheet" href="../../assets/css/service.css">
+   
+    <script src="../../assets/js/book.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +36,7 @@
           <a href="../../index.html" style="text-decoration: none;">
             <div class="logo">
                 <img src="../../assets/images/Nova Ventures.webp" alt="Noah Shipping & Logistics Limited Logo" class="brand" >
-                <h2>(PVT) <span>Ltd</span></h2>
+                <h2>Noah Shipping  & logistics</h2>
             </div>
           </a>
             <ul class="nav-links">
@@ -60,26 +63,70 @@
                     <a href="#">Media</a>
                     <ul class="dropdown-content">
                         <li><a href="../media/blogs.html">Blogs</a></li>
-                        <li><a href="testimonials.html">Testimonial</a></li>
+                        <li><a href="../media/testimonials.html">Testimonial</a></li>
                         <!-- <li><a href="#">Gallery</a></li>
                         <li><a href="#">Videos</a></li> -->
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <button class="inquiry-btn" onclick="openForm()">Inquiry</button>
+            <a href="#serviceBookingForm" class="service-booking-button"> <button class="inquiry-btn"  onclick="openForm" >Inquiry</button></a>
+            
+              <!-- Service Booking Form -->
+              <div id="serviceBookingForm" class="modal1">
+                <div class="modal-content">
+                   <span class="close-button">&times;</span>
+                    <h2>Inquiry</h2>
+                       <form id="bookingForm">
+                           <label for="name">Name:</label>
+                           <input type="text" id="name" name="name" required>
+
+                           <label for="email">Email:</label>
+                           <input type="email" id="email" name="email" required>
+
+                           <label for="phone">Phone Number:</label>
+                           <input type="tel" id="phone" name="phone" required>
+
+                           <label for="service">Service Required:</label>
+                               <select id="service" name="service" required>
+                                   <option value="freight-forwarding">Freight Forwarding</option>
+                                   <option value="cargo-handling">Cargo Handling</option>
+                                   <option value="cfs-operations">CFS Operations</option>
+                                   <option value="clearing-forwarding">Clearing and Forwarding</option>
+                                   <option value="transportation">Transportation</option>
+                                   <option value="rail-services">Rail Services</option>
+                                   <option value="warehousing">Warehousing and Distribution</option>
+                                   <option value="insurance">Insurance Services</option>
+                                   <option value="courier">Courier Services</option>
+                                   <option value="shipping-agency">Shipping Agency Services</option>
+                                   <option value="legal-solutions">Legal Solutions</option>
+                                   <option value="cargo-survey">Cargo Survey</option>
+                                   <option value="special-cargo-handling">Special Cargo Handling</option>
+                               </select>
+
+                               <label for="message">Additional Information:</label>
+                               <textarea id="message" name="message" rows="4" required></textarea>
+
+                               <button type="submit">Submit</button>
+                        </form>
+                   </div>
+               </div>
+
+
+
+            
 
               <!-- Inquiry Form Modal -->
-<div id="inquiryForm" class="modal">
+<!-- <div id="inquiryForm" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeForm()">&times;</span>
         <h2>Inquiry Form</h2>
         <div class="progress-bar">
             <div class="progress" id="progress"></div>
         </div>
-        
+         -->
         <!-- Step 1 -->
-        <div class="form-step form-step-active">
+        <!-- <div class="form-step form-step-active">
             <h3>Step 1 of 3</h3>
             <div class="form-group">
                 <label for="firstName">Name *</label>
@@ -103,10 +150,10 @@
                 <input type="text" id="position" placeholder="Position/Title">
             </div>
             <button type="button" class="btn" onclick="nextStep()">Next</button>
-        </div>
+        </div> -->
         
         <!-- Step 2 -->
-        <div class="form-step">
+        <!-- <div class="form-step">
             <h3>Step 2 of 3</h3>
             <h4>Service Details</h4>
             <div class="form-group">
@@ -140,9 +187,9 @@
                 <input type="text" placeholder="City">
                 <input type="text" placeholder="State / Province / Region">
                 <select>
-                    <option value="">--- Select country ---</option>
+                    <option value="">--- Select country ---</option> -->
                     <!-- Add country options here -->
-                    <option value="USA">USA</option>
+                    <!-- <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
                     <option value="UK">UK</option>
                 </select>
@@ -153,9 +200,9 @@
                 <input type="text" placeholder="City">
                 <input type="text" placeholder="State / Province / Region">
                 <select>
-                    <option value="">--- Select country ---</option>
+                    <option value="">--- Select country ---</option> -->
                     <!-- Add country options here -->
-                    <option value="USA">USA</option>
+                    <!-- <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
                     <option value="UK">UK</option>
                 </select>
@@ -173,10 +220,10 @@
             </div>
             <button type="button" class="btn" onclick="prevStep()">Previous</button>
             <button type="button" class="btn" onclick="nextStep()">Next</button>
-        </div>
+        </div> -->
 
         <!-- Step 3 -->
-        <div class="form-step">
+        <!-- <div class="form-step">
             <h3>Step 3 of 3</h3>
             <h4>Timeline and Frequency</h4>
             <div class="form-group">
@@ -208,9 +255,9 @@
             <button type="submit" class="btn">Submit</button>
         </div>
     </div>
-</div>
+</div> -->
 
-<script>
+<!-- <script>
     document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('inquiryForm');
     const progressBar = document.getElementById('progress');
@@ -266,7 +313,7 @@
 });
 
 
-</script>
+</script> -->
 
             <div class="hamburger">
                 <span></span>
@@ -452,10 +499,10 @@
                 </div> -->
                 <div class="office">
                     <h2>Mombasa Offices</h2>
-                    <p><i class="fas fa-map-marker-alt"></i> Ralli House, 3th Floor </p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ganjoni Building, Opposite Ganjoni Wananchi Hotel </p>
                     <p><i class="fas fa-envelope"></i> P.O. Box 41456-80100, Mombasa Kenya</p>
-                    <p><i class="fas fa-phone-alt"></i> +254 11 099 9111</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Nyerere Avenue</p>
+                    <p><i class="fas fa-phone-alt"></i> +254 110 999 111</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Along St. Bernard Road</p>
                     <!-- <p><i class="fas fa-phone-alt"></i> +254 41 22 209 87</p> -->
                 </div>
             </div>
@@ -484,10 +531,10 @@
         </div> -->
         <div class="location" id="map">
             <h2>Mombasa</h2>
-            <h3>Ralli House</h3>
+            <h3> Ganjoni Building</h3>
             <div class="map">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7826045173606!2d39.66805007341645!3d-4.06467964497199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184013223a584e2f%3A0xddc8d9e3decd1f6c!2sRalli%20House!5e0!3m2!1sen!2ske!4v1719267370704!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d652.5420490676993!2d39.658382013203806!3d-4.062746819238567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184013aa388cee8f%3A0xca62d1e33d6ffbf1!2sGanjoni%20Wananchi%20Hotel!5e1!3m2!1sen!2ske!4v1719768156840!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                     width="600" 
                     height="450" 
                     style="border:0;" 
@@ -537,20 +584,20 @@
             <div class="services">
                 <h3>Services</h3>
                 <ul>
-                    <li><a href="#">International Freight Forwarding</a></li>
-                    <li><a href="#">Noah Shipping & Logistics Limited</a></li>
-                    <li><a href="#">Sea Freight</a></li>
-                    <li><a href="#">Clearing & Forwarding</a></li>
-                    <li><a href="#">Warehousing & Distribution</a></li>
-                    <li><a href="#">Road Freight</a></li>
+                    <li><a href="../../content/services/service.html">International Freight Forwarding</a></li>
+                    <li><a href="../../content/services/service.html">CFS Operations</a></li>
+                    <li><a href="../../content/services/service.html">Cargo Handling</a></li>
+                    <li><a href="../../content/services/service.html">Clearing & Forwarding</a></li>
+                    <li><a href="../../content/services/service.html">Warehousing & Distribution</a></li>
+                    <li><a href="../../content/services/service.html">Road Freight</a></li>
                 </ul>
             </div>
             <div class="head-office">
                 <h3>Mombasa Head Office</h3>
-                <p>Ralli House, 3th Floor,<br>
-                   Nyerere Avenue P.O. Box 41456 <br>
+                <p>Ganjoni Building<br>
+                   St.Bernad Road P.O. Box 41456 <br>
                    80100 Mombasa, Kenya</p>
-                <p>Tel: +254 11 099 9111<br>
+                <p>Tel: +254 110 999 111<br>
                    <!-- Cell: +254 718 457 474</p> -->
                 <p>Email: <a href="mailto:info@noah-shipping.com ">info@noah-shipping.com </a></p>
                 <a href="contact.html#map" class="get-direction">Get Direction</a>
